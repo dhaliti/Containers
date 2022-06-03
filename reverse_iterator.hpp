@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 15:00:40 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/06/03 15:33:00 by dhaliti          ###   ########.fr       */
+/*   Updated: 2022/04/22 13:25:40 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ namespace ft
 
         reverse_iterator_map &operator++()
         {
+            // find the smallest greater
             if (this->_begin->left)
             {
                 this->_begin = this->_begin->left->max();
@@ -69,6 +70,7 @@ namespace ft
             }
             else if (this->_begin->parent)
             {
+                // find first previous greater node
                 key_type key = this->_begin->pair.first;
                 Node *tmp = this->_begin->parent;
                 while (tmp && this->_comp(key, tmp->pair.first))
@@ -85,6 +87,7 @@ namespace ft
 
         reverse_iterator_map &operator--()
         {
+            // find the smallest greater
             if (this->_begin->right)
             {
                 this->_begin = this->_begin->right->min();
@@ -92,6 +95,7 @@ namespace ft
             }
             else if (this->_begin->parent)
             {
+                // find first previous greater node
                 key_type key = this->_begin->pair.first;
                 Node *tmp = this->_begin->parent;
                 while (tmp && this->_comp(tmp->pair.first, key))
@@ -133,6 +137,7 @@ namespace ft
 
     public:
         typedef T value_type;
+        // typedef Pointer   						Pointer;
         typedef Category iterator_category;
         typedef Reference reference;
         typedef Distance difference_type;
@@ -216,6 +221,7 @@ namespace ft
         {
             return (a._ptr - b._ptr);
         }
+        // friend bool 	operator> (const reverse_iterator_vec& lhs, const reverse_iterator_vec& rhs) { return lhs._ptr > rhs._ptr; }
         T &operator*()
         {
             return *_ptr;

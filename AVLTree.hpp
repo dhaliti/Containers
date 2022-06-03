@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Tree.hpp                                           :+:      :+:    :+:   */
+/*   AVLTree.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhaliti <dhaliti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 17:30:13 by dhaliti           #+#    #+#             */
-/*   Updated: 2022/05/21 18:49:43 by dhaliti          ###   ########.fr       */
+/*   Updated: 2022/06/03 15:17:16 by dhaliti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 namespace ft
 {
     template <class T, class Compare = std::less<typename T::first_type>, class Alloc = std::allocator<T> >
-    class Tree
+    class AVLTree
     {
     public:
 

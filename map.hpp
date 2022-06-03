@@ -6,7 +6,7 @@
 /*   By: dhaliti <dhaliti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 17:22:23 by dhaliti           #+#    #+#             */
-/*   Updated: 2022/05/21 18:54:15 by dhaliti          ###   ########.fr       */
+/*   Updated: 2022/05/23 10:52:21 by dhaliti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "iterators.hpp"
 #include "reverse_iterator.hpp"
 
-#include "Tree.hpp"
+#include "AVLTree.hpp"
 #include "pair.hpp"
 #include <memory>
 
@@ -265,6 +265,6 @@ namespace ft
 		}
 
     private:
-        tree _tree;
+        ALVTree _tree;
     };
 }

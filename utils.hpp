@@ -6,7 +6,7 @@
 /*   By: dhaliti <dhaliti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 17:30:22 by dhaliti           #+#    #+#             */
-/*   Updated: 2022/05/20 17:30:23 by dhaliti          ###   ########.fr       */
+/*   Updated: 2022/06/04 11:38:38 by dhaliti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,46 +14,82 @@
 
 namespace ft
 {
-    template< bool x, class T = void>
-    struct enable_if{};
+    template< bool x, class T = void> struct enable_if{};
 
     template<class T>
-    struct enable_if<true, T>
-    {
+    struct enable_if<true, T> {
         typedef T type;
     };
 
     template <class T>
-    struct is_integral { static const bool value = false; };
+    struct is_integral {
+		static const bool value = false;
+	};
 
     template <>
-    struct is_integral<bool> { static const bool value = true; };
-    template <>
-    struct is_integral<char> { static const bool value = true; };
-    template <>
-    struct is_integral<wchar_t> { static const bool value = true; };
-    template <>
-    struct is_integral<signed char> { static const bool value = true; };
-    template <>
-    struct is_integral<short int> { static const bool value = true; };
-    template <>
-    struct is_integral<int> { static const bool value = true; };
-    template <>
-    struct is_integral<long int> { static const bool value = true; };
-    template <>
-    struct is_integral<long long int> { static const bool value = true; };
-    template <>
-    struct is_integral<unsigned char> { static const bool value = true; };
-    template <>
-    struct is_integral<unsigned short int> { static const bool value = true; };
-    template <>
-    struct is_integral<unsigned int> { static const bool value = true; };
-    template <>
-    struct is_integral<unsigned long int> { static const bool value = true; };
-    template <>
-    struct is_integral<unsigned long long int> { static const bool value = true; };
+    struct is_integral<bool> {
+		static const bool value = true;
+	};
 
+    template <>
+    struct is_integral<char> {
+		static const bool value = true;
+	};
 
+    template <>
+    struct is_integral<wchar_t> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<signed char> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<short int> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<int> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<long int> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<long long int> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<unsigned char> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<unsigned short int> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<unsigned int> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<unsigned long int> {
+		static const bool value = true;
+	};
+
+    template <>
+    struct is_integral<unsigned long long int> {
+		static const bool value = true;
+	};
 
     template< class InputIt1, class InputIt2 >
     bool lexicographical_compare(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2)

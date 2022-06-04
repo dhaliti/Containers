@@ -6,7 +6,7 @@
 /*   By: dhaliti <dhaliti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 15:50:38 by dhaliti           #+#    #+#             */
-/*   Updated: 2022/06/03 16:05:19 by dhaliti          ###   ########.fr       */
+/*   Updated: 2022/06/04 12:39:52 by dhaliti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,9 @@ namespace ft
             return *this;
         }
 
-        size_type size() const { return _size; }
+        size_type size() const {
+			return _size;
+		}
 
         size_type max_size() const {
         	return (std::min((size_type) std::numeric_limits<difference_type>::max(),
@@ -131,9 +133,13 @@ namespace ft
             this->_capacity = n;
         }
 
-        reference operator[](size_type n) { return _begin[n]; }
+        reference operator[](size_type n) {
+			return _begin[n];
+		}
 
-        const_reference operator[](size_type n) const { return _begin[n]; }
+        const_reference operator[](size_type n) const {
+			return _begin[n];
+		}
 
         reference at(size_type n)
         {
@@ -307,16 +313,33 @@ namespace ft
             resize(0);
         }
 
-        iterator begin() { return iterator(this->_begin); }
-        const_iterator begin() const { return const_iterator(this->_begin); }
+        iterator begin() {
+			return iterator(this->_begin);
+		}
 
-        iterator end() { return iterator(this->_begin) + _size; }
-        const_iterator end() const { return const_iterator(this->_begin) + _size; }
+        const_iterator begin() const {
+			return const_iterator(this->_begin);
+		}
 
-        reverse_iterator rbegin() { return reverse_iterator(this->_begin) + _size - 1; }
-        reverse_iterator rend() { return reverse_iterator(this->_begin) - 1; }
+        iterator end() {
+			return iterator(this->_begin) + _size;
+		}
 
-        allocator_type get_allocator() const { return _alloc; }
+        const_iterator end() const {
+			return const_iterator(this->_begin) + _size;
+		}
+
+        reverse_iterator rbegin() {
+			return reverse_iterator(this->_begin) + _size - 1;
+		}
+
+        reverse_iterator rend() {
+			return reverse_iterator(this->_begin) - 1;
+		}
+
+        allocator_type get_allocator() const {
+			return _alloc;
+		}
 
 /***********************************PRIVATE************************************/
 

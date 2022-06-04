@@ -51,7 +51,6 @@ namespace ft
             }
         };
 
-
         class value_compare
 			{
 				friend class AVLTree;
@@ -253,8 +252,7 @@ namespace ft
             }
             return NULL;
         }
-
-/*https://www.geeksforgeeks.org/avl-tree-set-1-insertion/?ref=gcse*/
+/*Reference: https://www.geeksforgeeks.org/avl-tree-set-1-insertion/?ref=gcse*/
 
         Node *insert(Node *node, value_type key, Node* parent = NULL)
         {
@@ -322,7 +320,7 @@ namespace ft
             return cur;
         }
 
-/*https://www.geeksforgeeks.org/avl-tree-set-2-deletion/?ref=lbp*/
+/*Reference: https://www.geeksforgeeks.org/avl-tree-set-2-deletion/?ref=lbp*/
         Node *erase(Node *node, key_type key)
         {
             if (!node)
